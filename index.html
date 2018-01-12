@@ -13,13 +13,32 @@
                 width:100%;
                 height:100%;
             }
+            #galery{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                text-align: center;
+                margin: 32px;
+                padding: 32px;
+            }
+            img{
+                margin: 32px;
+            }
       </style>
     </head>
     <body>
         <div id="main">
-          <h1>SVG</h1>
-    
+            <h1>SVG</h1>
+            <div id="galery">
+                <img src="svg/plus.svg" alt="plus" width="256px" height="256px">
+                <img src="svg/cross.svg" alt="cross" width="256px" height="256px">
+                <img src="svg/horizontal-dots.svg" alt="" width="256px" height="256px">
+                <img src="svg/vertical-dots.svg" alt="" width="256px" height="256px">
+            </div>
+
         </div>
         <script src='app.js'></script>
-    </body> 
+    </body>
 </html>
