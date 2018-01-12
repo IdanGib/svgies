@@ -1,0 +1,28 @@
+{
+  "name": "svgies",
+  "version": "1.0.0",
+  "description": "svg art playground",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "app": "node app.js",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdanGib/svgies.git"
+  },
+  "author": "idangibly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IdanGib/svgies/issues"
+  },
+  "homepage": "https://github.com/IdanGib/svgies#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}
