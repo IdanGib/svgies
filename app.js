@@ -1,32 +1,98 @@
 const
 
     icons = [
-        'cross',
-        'horizontal-dots',
-        'vertical-dots',
-        'next-arrow',
-        'plus'
+        {
+            name:'cross',
+            isPresent: false
+        },
+        {
+            name:'horizontal-dots',
+            isPresent: false
+        },
+        {
+            name:'vertical-dots',
+            isPresent: false
+        },
+        {
+            name:'next-arrow',
+            isPresent: false
+        },
+        {
+            name:'plus',
+            isPresent: false
+        },
+        {
+            name:'minus',
+            isPresent: false
+        }
     ],
 
     gallery = document.getElementById('gallery'),
+    details = document.getElementById('details'),
 
-    show_dialog = ( icon )=> {
-        document.getElementById(icon).setAttribute('open', '');
+    close_dialog = ( icon)=> {
+        details.querySelector('#' + icon.name).remove();
+        icon.isPresent = false;
+
     },
 
-    close_dialog = ( icon )=> {
-        document.getElementById(icon).removeAttribute('open');
+    show_dialog = ( icon )=> {
+
+        if( icon.isPresent ){
+            return;
+        }
+
+        const
+            dialog = document.createElement('div'),
+            img = document.createElement('img'),
+            input = document.createElement('input')
+        ;
+
+        dialog.setAttribute('id', `${ icon.name }`);
+        dialog.classList.add('details-card');
+
+        img.setAttribute('src', `svg/${ icon.name }.svg`);
+        img.setAttribute('class', 'icon-img');
+
+
+        input.setAttribute('type', 'image');
+        input.setAttribute('src', 'svg/cross.svg');
+        input.setAttribute('class', 'close-icon');
+
+
+        input.addEventListener('click', ()=>{
+            close_dialog( icon );
+        });
+
+        dialog.appendChild(img);
+        dialog.appendChild(input);
+
+        details.appendChild( dialog );
+
+        icon.isPresent = true;
+
+        (function () {
+            setTimeout(()=>{dialog.setAttribute('style', 'opacity:1');},0);
+        }());
+
     };
 
 icons.forEach(( icon )=> {
-    gallery.innerHTML += `
-                    <div class="card">
-                    <input type="image" src="svg/${ icon }.svg" alt="${ icon }" onclick="show_dialog( '${ icon }' )">
-                    <dialog close id="${ icon }">
-                        <img src="svg/${ icon }.svg" alt="${ icon }" width="256px" height="256px">
-                        <input type="image" src="svg/cross.svg" onclick="close_dialog('${ icon }')"
-                               style="width: 32px; height: 32px;position: absolute;top:-16px;right: -16px;background: #fff">
-                    </dialog>
-                </div>
-    `;
+
+    const
+        div = document.createElement('div'),
+        input =  document.createElement('input')
+    ;
+
+    input.setAttribute('type', 'image');
+    input.setAttribute('src', `svg/${ icon.name }.svg`);
+    input.addEventListener('click', ()=>{
+        show_dialog( icon );
+    });
+
+    div.setAttribute('class', 'card');
+    div.appendChild(input);
+
+
+    gallery.appendChild(div);
 })

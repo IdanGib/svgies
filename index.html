@@ -16,8 +16,11 @@
                 height:100%;
             }
             #main {
+                display: flex;
+                flex-direction: column;
                 margin: 0;
                 padding: 0;
+                height: 100%;
             }
 
             #gallery{
@@ -53,38 +56,73 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                transition: opacity 0.2s;
+
             }
+
             .card input[type='image'] {
                 width: 64px;
                 height: 64px;
+                transition:  transform 0.1s;
+            }
+
+            .card input[type='image']:active{
+                transform: scale(1.2);
+            }
+            input {
                 outline: none;
             }
-
             input::-moz-focus-inner{
                 border: 0;
+
             }
 
-            dialog {
+            .details-card {
                 width: 512px;
                 height: 256px;
                 padding: 32px;
-                position: absolute;
-                margin: auto;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                top: 0;
-
+                position: relative;
                 border: 2px solid #ccc;
                 border-radius: 5px;
+                background: #fff;
+                margin: 32px;
+                flex-shrink: 0;
+                opacity: 0;
+                transition: transform 0.2s, opacity 2s;
+
             }
 
+            #details {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+                background: #eee;
+                flex-grow: 1;
+
+            }
+            .close-icon{
+                width: 32px; height: 32px;
+                position: absolute;
+                top:16px; right: 16px;
+                background: #fff;
+                transition: transform 0.2s;
+            }
+            .close-icon:active{
+                transform: scale(1.2);
+            }
+            .icon-img{
+                width: 256px;
+                height: 256px;
+            }
       </style>
     </head>
     <body>
         <div id="main">
             <h1>SVG icons gallery</h1>
             <div id="gallery"></div>
+            <div id="details"></div>
         </div>
         <script src='app.js'></script>
     </body>
