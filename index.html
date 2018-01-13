@@ -8,36 +8,83 @@
                 padding:0;
                 list-style:none;
             }
+
             html, body{
+                font-family: sans-serif;
                 position:absolute;
                 width:100%;
                 height:100%;
             }
-            #galery{
+            #main {
+                margin: 0;
+                padding: 0;
+            }
+
+            #gallery{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width:100%;
+                flex-wrap: wrap;
             }
+
             h1{
+
                 text-align: center;
-                margin: 32px;
+                margin:0;
                 padding: 32px;
+                background: chocolate;
+                width: 100%;
+                color: #fff;
             }
+
             img{
-                margin: 32px;
+                margin: 0;
             }
+
+            .card {
+                margin: 32px;
+
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                width: 128px;
+                padding: 16px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .card input[type='image'] {
+                width: 64px;
+                height: 64px;
+                outline: none;
+            }
+
+            input::-moz-focus-inner{
+                border: 0;
+            }
+
+            dialog {
+                width: 512px;
+                height: 256px;
+                padding: 32px;
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+
+                border: 2px solid #ccc;
+                border-radius: 5px;
+            }
+
       </style>
     </head>
     <body>
         <div id="main">
-            <h1>SVG</h1>
-            <div id="galery">
-                <img src="svg/plus.svg" alt="plus" width="256px" height="256px">
-                <img src="svg/cross.svg" alt="cross" width="256px" height="256px">
-                <img src="svg/horizontal-dots.svg" alt="" width="256px" height="256px">
-                <img src="svg/vertical-dots.svg" alt="" width="256px" height="256px">
-            </div>
-
+            <h1>SVG icons gallery</h1>
+            <div id="gallery"></div>
         </div>
         <script src='app.js'></script>
     </body>

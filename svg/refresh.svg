@@ -1,3 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <circle r="252" cx="256" cy="256" fill="none" stroke-width="8" stroke="#000"/>
+    <circle r="252" cx="256" cy="256" fill="none" stroke-width="8" stroke="none"/>
+    <defs>
+        <marker id="Triangle" viewBox="0 0 32 32" refX="24" refY="16"
+                markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M 4 4 L 28 16 L 4 28" transform="rotate(5 24 16)" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+        </marker>
+    </defs>
+
+    <path d="M64 200 Q256 -128, 448 200" fill="none" stroke="black" stroke-linecap="round"
+              stroke-width="8" marker-end="url(#Triangle)" />
+
+    <path d="M448 310 Q256 544, 64 310" fill="none" stroke="black" stroke-linecap="round"
+      stroke-width="8" marker-end="url(#Triangle)" />
 </svg>
