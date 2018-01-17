@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <circle r="252" cx="256" cy="256" fill="none" stroke-width="8" stroke="#000"/>
-    <path d="M256 80 L256 432 M80 256 L432 256" stroke-width="8" stroke="#000" stroke-linecap="round" transform="rotate(45 256 256)"/>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <circle r="14" cx="16" cy="16" fill="none" stroke-width="1" stroke="#000"/>
+    <g transform="rotate(45 16 16)">
+    	<line x1="8" y1="16" x2="24" y2="16" stroke-width="1" stroke="#000" stroke-linecap="round"/>
+    	<line x1="16" y1="8" x2="16" y2="24" stroke-width="1" stroke="#000" stroke-linecap="round"/>
+    </g>
+
 </svg>

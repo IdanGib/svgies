@@ -14,7 +14,7 @@ const
             isPresent: false
         },
         {
-            name:'next-arrow',
+            name:'arrows',
             isPresent: false
         },
         {
@@ -23,6 +23,10 @@ const
         },
         {
             name:'minus',
+            isPresent: false
+        },
+        {
+            name:'menu',
             isPresent: false
         }
     ],
@@ -72,7 +76,7 @@ const
         icon.isPresent = true;
 
         (function () {
-            setTimeout(()=>{dialog.setAttribute('style', 'opacity:1');},0);
+            setTimeout(()=>{dialog.setAttribute('style', 'opacity:1');},100);
         }());
 
     };
