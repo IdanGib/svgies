@@ -3,17 +3,18 @@
     <head>
         <title>svg</title>
         <style>
-            *{
-                margin:0;
-                padding:0;
-                list-style:none;
-            }
+
 
             html, body{
                 font-family: sans-serif;
-                position:absolute;
                 width:100%;
                 height:100%;
+                background: #eee;
+                margin:0;
+                padding:0;
+            }
+            ul {
+                list-style:none;
             }
             #main {
                 display: flex;
@@ -21,24 +22,31 @@
                 margin: 0;
                 padding: 0;
                 height: 100%;
+                align-items: center;
             }
 
             #gallery{
                 display: flex;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 width:100%;
                 flex-wrap: wrap;
+                background: #ccc;
+                height: 180px;
+                flex-shrink: 0;
             }
 
-            h1{
-
-                text-align: center;
+            h1 {
+                font-size: 3em;
                 margin:0;
-                padding: 32px;
-                background: chocolate;
+                background: #333;
+                height: 128px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 100%;
                 color: #fff;
+                flex-shrink: 0;
             }
 
             img{
@@ -46,7 +54,7 @@
             }
 
             .card {
-                margin: 32px;
+                margin: 0/*32px*/;
 
                 border: 1px solid #ccc;
                 border-radius: 5px;
@@ -58,6 +66,7 @@
                 align-items: center;
 
                 transition: opacity 0.2s;
+                background: #fff;
 
             }
 
@@ -81,12 +90,12 @@
             .details-card {
                 width: 512px;
                 height: 256px;
-                padding: 32px;
+                padding: 0/*32px*/;
                 position: relative;
                 border: 2px solid #ccc;
                 border-radius: 5px;
                 background: #fff;
-                margin: 32px;
+                margin: 16px 0;
                 flex-shrink: 0;
                 opacity: 0;
                 transition: transform 0.2s, opacity 2s;
@@ -95,12 +104,14 @@
 
             #details {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 0;
-                background: #eee;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                background: #ddd;
                 flex-grow: 1;
-
+                width: 1024px;
+                overflow-y: scroll;
             }
             .close-icon{
                 width: 32px; height: 32px;

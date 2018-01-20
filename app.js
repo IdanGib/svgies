@@ -2,15 +2,15 @@ const
 
     icons = [
         {
+            name:'v',
+            isPresent: false
+        },
+        {
             name:'cross',
             isPresent: false
         },
         {
-            name:'horizontal-dots',
-            isPresent: false
-        },
-        {
-            name:'vertical-dots',
+            name:'dots',
             isPresent: false
         },
         {
@@ -27,6 +27,14 @@ const
         },
         {
             name:'menu',
+            isPresent: false
+        },
+        {
+            name:'head-arrows',
+            isPresent: false
+        },
+        {
+            name:'no-image',
             isPresent: false
         }
     ],

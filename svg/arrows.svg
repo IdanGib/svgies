@@ -1,19 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-    <circle r="16" cx="18" cy="18" fill="none" stroke-width="1" stroke="#000"/>
-    <g transform="translate(-3, 0), rotate(135 18 18)">
-    	<path d="M12 12 L24 12" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
-        <path d="M12 12 L12 24" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+
+    <g style="display:none">
+    	<path d="M8 16 L16 8" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+    	<path d="M8 16 L24 16" stroke-width="2" stroke="#000" stroke-linecap="round"/>
+    	<path d="M8 16 L16 24" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>   	
     </g>
-        <g transform="translate(0, 3), rotate(45 18 18)" style="display:none">
-    	<path d="M12 12 L24 12" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
-        <path d="M12 12 L12 24" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
+    <g transform="rotate(90 16 16)" style="display:none">
+    	<path d="M8 16 L16 8" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+    	<path d="M8 16 L24 16" stroke-width="2" stroke="#000" stroke-linecap="round"/>
+    	<path d="M8 16 L16 24" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>   	
     </g>
-        <g transform="translate(3, 0), rotate(-45 18 18)" style="display:none">
-    	<path d="M12 12 L24 12" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
-        <path d="M12 12 L12 24" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
+    <g transform="rotate(180 16 16)" style="display:none">
+    	<path d="M8 16 L16 8" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+    	<path d="M8 16 L24 16" stroke-width="2" stroke="#000" stroke-linecap="round"/>
+    	<path d="M8 16 L16 24" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>   	
     </g>
-        <g transform="translate(0, -3), rotate(-135 18 18)" style="display:none">
-    	<path d="M12 12 L24 12" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
-        <path d="M12 12 L12 24" fill="none" stroke-width="1" stroke-linejoin="round" stroke="#000" stroke-linecap="round"/>
+    <g transform="rotate(270 16 16)" style="display:auto">
+    	<path d="M8 16 L16 8" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+    	<path d="M8 16 L24 16" stroke-width="2" stroke="#000" stroke-linecap="round"/>
+    	<path d="M8 16 L16 24" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>   	
     </g>
+
 </svg>
