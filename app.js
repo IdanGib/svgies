@@ -1,58 +1,47 @@
 const
-
     icons = [
-        {
-            name:'v',
-            isPresent: false
-        },
-        {
-            name:'cross',
-            isPresent: false
-        },
-        {
-            name:'dots',
-            isPresent: false
-        },
-        {
-            name:'arrows',
-            isPresent: false
-        },
-        {
-            name:'plus',
-            isPresent: false
-        },
-        {
-            name:'minus',
-            isPresent: false
-        },
-        {
-            name:'menu',
-            isPresent: false
-        },
-        {
-            name:'head-arrows',
-            isPresent: false
-        },
-        {
-            name:'no-image',
-            isPresent: false
-        }
+        'v',
+        'cross',
+        'dots',
+        'arrows',
+        'plus',
+        'minus',
+        'menu',
+        'head-arrows',
+        'no-image',
+        'map',
+        'copy',
+        'note',
+        'phone',
+        'search',
+        'cloud',
+        'settings',
+        'upload',
+        'download',
+        'home',
+        'voice'
     ],
+
+    icons_data = icons.map(function(ic) {
+        return {
+            name: ic,
+            isPresent: false
+        };
+    }),
+
+    app_data = { inStage: undefined },
 
     gallery = document.getElementById('gallery'),
     details = document.getElementById('details'),
 
-    close_dialog = ( icon)=> {
-        details.querySelector('#' + icon.name).remove();
-        icon.isPresent = false;
-
+    addActionsToDialog = function(dialog, icon) {
+        const actions = document.createElement('div');
+        actions.setAttribute('class', 'actions');
+        dialog.appendChild( actions );
     },
 
-    show_dialog = ( icon )=> {
 
-        if( icon.isPresent ){
-            return;
-        }
+    pushDailog = function(stage, icon) {
 
         const
             dialog = document.createElement('div'),
@@ -76,20 +65,41 @@ const
             close_dialog( icon );
         });
 
+
+
         dialog.appendChild(img);
         dialog.appendChild(input);
 
-        details.appendChild( dialog );
+        addActionsToDialog( dialog, icon );
+
+        stage.appendChild( dialog );
 
         icon.isPresent = true;
 
         (function () {
-            setTimeout(()=>{dialog.setAttribute('style', 'opacity:1');},100);
+            setTimeout(()=>{ dialog.setAttribute('style', 'opacity:1');},100);
         }());
+    },
 
+
+    close_dialog = ( icon )=> {
+        if ( icon ) {
+            details.querySelector('#' + icon.name).remove();
+            icon.isPresent = false;
+            app_data.inStage = undefined;
+        }
+    },
+
+    show_dialog = ( icon )=> {
+
+        if( !icon.isPresent ) {
+            close_dialog(app_data.inStage);
+            pushDailog(details, icon);
+            app_data.inStage = icon;
+        }
     };
 
-icons.forEach(( icon )=> {
+icons_data.forEach(( icon )=> {
 
     const
         div = document.createElement('div'),
@@ -98,6 +108,7 @@ icons.forEach(( icon )=> {
 
     input.setAttribute('type', 'image');
     input.setAttribute('src', `svg/${ icon.name }.svg`);
+
     input.addEventListener('click', ()=>{
         show_dialog( icon );
     });

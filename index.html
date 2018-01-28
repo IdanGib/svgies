@@ -32,8 +32,9 @@
                 width:100%;
                 flex-wrap: wrap;
                 background: #ccc;
-                height: 180px;
+                height: 250px;
                 flex-shrink: 0;
+                overflow-y: scroll;
             }
 
             h1 {
@@ -68,6 +69,8 @@
                 transition: opacity 0.2s;
                 background: #fff;
 
+                flex-shrink: 0;
+
             }
 
             .card input[type='image'] {
@@ -87,9 +90,17 @@
 
             }
 
+            .actions {
+                background: #fff;
+                height: 64px;
+                margin: 0;
+                padding: 0;
+                border-top: 7px solid #eee;
+            }
+
             .details-card {
                 width: 512px;
-                height: 256px;
+                height: 320px;
                 padding: 0/*32px*/;
                 position: relative;
                 border: 2px solid #ccc;
@@ -111,22 +122,25 @@
                 background: #ddd;
                 flex-grow: 1;
                 width: 1024px;
-                overflow-y: scroll;
             }
-            .close-icon{
+
+            .close-icon {
                 width: 32px; height: 32px;
                 position: absolute;
                 top:16px; right: 16px;
                 background: #fff;
                 transition: transform 0.2s;
             }
+
             .close-icon:active{
                 transform: scale(1.2);
             }
+
             .icon-img{
                 width: 256px;
                 height: 256px;
             }
+
       </style>
     </head>
     <body>
