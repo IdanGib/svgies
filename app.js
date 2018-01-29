@@ -19,7 +19,8 @@ const
         'upload',
         'download',
         'home',
-        'voice'
+        'voice',
+        'net'
     ],
 
     icons_data = icons.map(function(ic) {
