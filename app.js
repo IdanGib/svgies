@@ -20,7 +20,10 @@ const
         'download',
         'home',
         'voice',
-        'net'
+        'net',
+        'wifi',
+        'open-file',
+        'read'
     ],
 
     icons_data = icons.map(function(ic) {

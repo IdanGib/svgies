@@ -3,8 +3,6 @@
     <head>
         <title>svg</title>
         <style>
-
-
             html, body{
                 font-family: sans-serif;
                 width:100%;
@@ -25,13 +23,12 @@
                 align-items: center;
             }
 
-            #gallery{
+            #gallery {
                 display: flex;
-                justify-content: space-around;
-                align-items: center;
+                justify-content: flex-start;
                 width:100%;
                 flex-wrap: wrap;
-                background: #ccc;
+                background: #fff;
                 height: 250px;
                 flex-shrink: 0;
                 overflow-y: scroll;
@@ -50,26 +47,22 @@
                 flex-shrink: 0;
             }
 
-            img{
+            img {
                 margin: 0;
+                
             }
 
             .card {
-                margin: 0/*32px*/;
-
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                width: 128px;
-                padding: 16px;
-
                 display: flex;
-                flex-direction: column;
+                justify-content: center;
                 align-items: center;
 
-                transition: opacity 0.2s;
                 background: #fff;
-
-                flex-shrink: 0;
+                border-radius: 5px;
+                height: 64px;
+                flex-grow: 1;
+                margin: 2px;
+                padding: 20px;
 
             }
 

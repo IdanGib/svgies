@@ -5,5 +5,5 @@
         <path d="M9 18 L27 18" stroke-width="3" stroke="#000" stroke-linecap="round"/>
         <path d="M9 18 L18 27" stroke-width="3" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>   	
     </g>
-    <line x1="6" x2="30" y1="34" y2="34" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+    <line x1="8" x2="28" y1="34" y2="34" stroke="#000" stroke-width="3" stroke-linecap="round"/>
 </svg>
