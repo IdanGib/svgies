@@ -38,6 +38,7 @@ const
     addActionsToDialog = function(dialog, icon) {
         const actions = document.createElement('div');
         actions.setAttribute('class', 'actions');
+        actions.innerHTML = `<h2>${icon.name}</h2>`;
         dialog.appendChild( actions );
     },
 
