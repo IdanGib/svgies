@@ -1,32 +1,39 @@
 const
-    icons = [
-        'v',
-        'cross',
-        'dots',
-        'arrows',
-        'plus',
-        'minus',
-        'menu',
-        'head-arrows',
-        'no-image',
-        'map',
-        'copy',
-        'note',
-        'phone',
-        'search',
-        'cloud',
-        'settings',
-        'upload',
-        'download',
-        'home',
-        'voice',
-        'net',
-        'wifi',
-        'open-file',
-        'read'
-    ],
+    tags_data = {
+        'a': ['cross','dots','arrows'],
+        'b': ['minus','menu'],
+        'c': ['copy','wifi'],
+        'icon': [
+            'v',
+            'cross',
+            'dots',
+            'arrows',
+            'plus',
+            'minus',
+            'menu',
+            'head-arrows',
+            'no-image',
+            'map',
+            'copy',
+            'note',
+            'phone',
+            'search',
+            'cloud',
+            'settings',
+            'upload',
+            'download',
+            'home',
+            'voice',
+            'net',
+            'wifi',
+            'open-file',
+            'read'
+        ]
+    },
+    
+    tags = Object.keys( tags_data ),
 
-    icons_data = icons.map(function(ic) {
+    icons_data = tags_data['icon'].map(function(ic) {
         return {
             name: ic,
             isPresent: false
@@ -34,6 +41,8 @@ const
     }),
 
     app_data = { inStage: undefined },
+
+    
 
     gallery = document.getElementById('gallery'),
     details = document.getElementById('details'),
@@ -82,7 +91,8 @@ const
         icon.isPresent = true;
 
         (function () {
-            setTimeout(()=>{ dialog.setAttribute('style', 'opacity:1');},100);
+            setTimeout(()=>{ 
+                dialog.setAttribute('style', 'opacity:1');},100);
         }());
     },
 
@@ -102,25 +112,76 @@ const
             pushDailog(details, icon);
             app_data.inStage = icon;
         }
-    };
+    },
+    
+    iconsView = {},
+    update = function( icons_names ){
+        let ic;
+        Object.keys(iconsView).forEach(function(view_name){
+            
+            let classes = iconsView[view_name].classList;
 
-icons_data.forEach(( icon )=> {
+            if( !icons_names.has(view_name) ) {
+                classes.add('hide');
+            } else if(classes.contains('hide')){
+                classes.remove('hide');
+            }
+        });
+    },
+    search = function(text) {
+        
+        let result, set
+            text = text || 'icon';
+        ;
 
-    const
-        div = document.createElement('div'),
-        input =  document.createElement('input')
-    ;
+        result = tags
+        .filter( 
+            function(tag) { 
+                return tag.startsWith(text); 
+        })
+        .map( 
+            function(tag) {
+                return tags_data[tag];
+        });
 
-    input.setAttribute('type', 'image');
-    input.setAttribute('src', `svg/${ icon.name }.svg`);
+        result.push(
+            tags_data['icon'].filter(
+                function(icon) {
+                    return icon.startsWith(text);         
+                }
+            ));
 
-    input.addEventListener('click', ()=>{
-        show_dialog( icon );
-    });
+        set = new Set(
+            result.reduce(
+                function(arr1, arr2){
+                    return arr1.concat(arr2);
+        }, []));
+        
+        update(set);
+        return set;
+    },
+    start = function() {
+        icons_data.forEach(( icon )=> {
 
-    div.setAttribute('class', 'card');
-    div.appendChild(input);
+            const
+                div = document.createElement('div'),
+                input =  document.createElement('input')
+            ;
 
+            input.setAttribute('type', 'image');
+            input.setAttribute('src', `svg/${ icon.name }.svg`);
 
-    gallery.appendChild(div);
-})
+            input.addEventListener('click', ()=>{
+                show_dialog( icon );
+            });
+
+            div.setAttribute('class', 'card');
+            div.appendChild(input);
+
+            // init icons view for later use
+            iconsView[icon.name] = div;
+
+            gallery.appendChild(div);
+
+        });
+}
