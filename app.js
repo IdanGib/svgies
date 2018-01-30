@@ -1,8 +1,7 @@
 const
     tags_data = {
-        'a': ['cross','dots','arrows'],
-        'b': ['minus','menu'],
-        'c': ['copy','wifi'],
+        'arrow': ['head-arrows','arrows'],
+        'menu': ['menu1', 'menu2'],
         'icon': [
             'v',
             'cross',
@@ -10,7 +9,8 @@ const
             'arrows',
             'plus',
             'minus',
-            'menu',
+            'menu1',
+            'menu2',
             'head-arrows',
             'no-image',
             'map',
