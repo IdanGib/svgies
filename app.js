@@ -23,7 +23,6 @@ const
             'upload',
             'download',
             'home',
-            'voice',
             'net',
             'wifi',
             'open-file',
@@ -119,11 +118,14 @@ const
         let ic;
         Object.keys(iconsView).forEach(function(view_name){
             
-            let classes = iconsView[view_name].classList;
+            const classes = iconsView[view_name].classList;
 
             if( !icons_names.has(view_name) ) {
+
                 classes.add('hide');
+
             } else if(classes.contains('hide')){
+
                 classes.remove('hide');
             }
         });
@@ -151,13 +153,17 @@ const
                 }
             ));
 
-        set = new Set(
-            result.reduce(
+        const icons = result.reduce(
                 function(arr1, arr2){
                     return arr1.concat(arr2);
-        }, []));
+        }, []);
+
+        set = new Set(icons);
+
+        if (set.size > 0 ) {
+            update(set);
+        }
         
-        update(set);
         return set;
     },
     start = function() {
