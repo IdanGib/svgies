@@ -26,7 +26,9 @@ const
             'net',
             'wifi',
             'open-file',
-            'read'
+            'read',
+            'idea',
+            'build'
         ]
     },
     
