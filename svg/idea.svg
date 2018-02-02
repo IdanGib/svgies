@@ -1,6 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-    <g transform="translate(0, 6)">
-        <path d="M16 18 C0 0, 36 0, 20 18" stroke="#000" stroke-width="2" 
-            fill="none" stroke-linecap="round"/>
-    </g>
+
+        <path d="M16 18 l1 1 l1 -1 l1 1 l1 -1" stroke="#000" stroke-width="1" 
+            fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="18" cy="18" r="6" stroke="#000" stroke-width="1.5" fill="none"/>
+    
+        <!--path d="M18 8 l0 -2" transform="rotate(-60 18 18)"
+        	stroke="#000" stroke-width="2" 
+        	fill="none" stroke-linecap="round"/-->
+        <path d="M18 8 l0 -2" transform="rotate(-45 18 18)"
+        	stroke="#000" stroke-width="1.5" 
+        	fill="none" stroke-linecap="round"/>
+       	<path d="M18 8 l0 -2" transform="rotate(0 18 18)"
+        	stroke="#000" stroke-width="1.5" 
+        	fill="none" stroke-linecap="round"/>
+       	<path d="M18 8 l0 -2" transform="rotate(45 18 18)"
+        	stroke="#000" stroke-width="1.5" 
+        	fill="none" stroke-linecap="round"/>
+        <!--path d="M18 8 l0 -2" transform="rotate(60 18 18)"
+        	stroke="#000" stroke-width="2" 
+        	fill="none" stroke-linecap="round"/-->
 </svg>
