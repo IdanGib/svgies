@@ -27,7 +27,6 @@ const
             'wifi',
             'open-file',
             'read',
-            'idea',
             'build'
         ]
     },
@@ -141,7 +140,7 @@ const
         result = tags
         .filter( 
             function(tag) { 
-                return tag.startsWith(text); 
+                return tag.toLowerCase().includes(text); 
         })
         .map( 
             function(tag) {
@@ -151,7 +150,7 @@ const
         result.push(
             tags_data['icon'].filter(
                 function(icon) {
-                    return icon.startsWith(text);         
+                    return icon.toLowerCase().includes(text);        
                 }
             ));
 

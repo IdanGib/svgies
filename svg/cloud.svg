@@ -1,7 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-	<circle r="8" cx="18" cy="18" fill="#fff" stroke="#000" stroke-width="1"/>
+	<!--circle r="8" cx="18" cy="18" fill="#fff" stroke="#000" stroke-width="1"/>
 	<circle r="6" cx="10" cy="18" fill="#fff" stroke="#000" stroke-width="1" 
 		stroke-dasharray="24.6" stroke-dashoffset="-6.5"/>
     <circle r="4" cx="26" cy="18" fill="#fff" stroke="#000" stroke-width="1" 
-    	stroke-dasharray="9.5" stroke-dashoffset="1.7"/>
+    	stroke-dasharray="9.5" stroke-dashoffset="1.7"/-->
+
+    <path d="M9 21 A 4 4 0 1 1 9 15" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+	<path d="M9 15 A 4 4 0 1 1 23 14" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"/>
+	<path d="M23 22 A 4 4 0 1 1 9 21" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+	<path d="M23 14 A 6 6 0 1 1 23 22" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"/>
 </svg>
