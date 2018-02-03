@@ -27,7 +27,9 @@ const
             'wifi',
             'open-file',
             'read',
-            'build'
+            'build',
+            'music',
+            'puzzel'
         ]
     },
     
