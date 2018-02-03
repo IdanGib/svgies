@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-        <path d="M18 18 m-9 -9 h3 m6 0 h3 v3 m0 6 v3 h-3 m-6 0 h-3 v-3 m0 -6 v-3 m0 3 
+        <!--path d="M18 18 m-9 -9 h3 m6 0 h3 v3 m0 6 v3 h-3 m-6 0 h-3 v-3 m0 -6 v-3 m0 3 
         	a 3 3 0 1 1 0 6 m3 3
         	a 3 3 0 0 0 6 0 m3 -3
         	a 3 3 0 1 1 0 -6 m-3 -3
@@ -8,6 +8,17 @@
         	stroke-width="2" 
             fill="none" 
             stroke-linecap="round" 
-            stroke-linejoin="round"/>
-
+            stroke-linejoin="round"/-->
+        <path d="M18 18 
+        	m-9 -9 
+        	h5.5 a 2.5 2.5 0 1 1 1 0 h5.5
+        	v4 a 2.5 2.5 0 1 0 0 4 v4
+           h-5.5 a 2.5 2.5 0 1 1 -1 0 h-5.5 
+           v-4 a 2.5 2.5 0 1 0 0 -4 v-4" 
+        	stroke="#000" 
+        	stroke-width="1" 
+            fill="#000" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+            transform="scale(1.4,1.2) translate(-2, 0)"/>
 </svg>

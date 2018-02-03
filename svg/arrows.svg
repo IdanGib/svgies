@@ -16,9 +16,9 @@
         <path d="M9 18 L18 27" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>      	
     </g>
     <g transform="rotate(270 18 18)" style="display:auto">
-        <path d="M9 18 L18 9" stroke-width="3" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M9 18 L27 18" stroke-width="3" stroke="#000" stroke-linecap="round"/>
-        <path d="M9 18 L18 27" stroke-width="3" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>   	
+        <path d="M9 18 L18 9" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 18 L27 18" stroke-width="2" stroke="#000" stroke-linecap="round"/>
+        <path d="M9 18 L18 27" stroke-width="2" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>   	
     </g>
 
 </svg>
